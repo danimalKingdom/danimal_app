@@ -1,0 +1,8 @@
+<h2>All Danimals:</h2>
+
+<% @danimals.each do |danimal| %> 
+  <div>
+    Species: <%= danimal.species %> <br>
+    Leg Count: <%= danimal.leg_count %>
+  </div>
+<% end %>

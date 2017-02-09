@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   root to: 'danimals#index'
   #get '/' => 'danimals#index', as: 'root'
 
-  resources :danimals, only: [:index, :new, :create, :show, :edit, :update]
+  #all restful routes
+  resources :danimals#, only: [:index, :new, :create, :show, :edit, :update, :destroy]
   #get '/danimals' => 'danimals#index', as: 'danimals'
   #get '/danimals/new' => 'danimals#new', as: 'new_danimal'
   #post '/danimals/create' => 'danimals#create'
@@ -11,5 +12,6 @@ Rails.application.routes.draw do
   #get '/danimals/:id/edit' => 'danimals#edit'm as: 'edit_danimal'
   #patch '/danimals/:id' => 'danimals#update'
   #put '/danimals/:id' => 'danimals#update'
+  #delete '/danimals/:id' => 'danimals#destroy'
 
 end

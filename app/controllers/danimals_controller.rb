@@ -13,6 +13,7 @@ class DanimalsController < ApplicationController
       )
 
     redirect_to danimal
+    #display show page for whatever model you just created
     #redirect_to danimal_path(danimal)
     #redirect_to '/danimals/#{danimal.id}'
   end
@@ -27,12 +28,20 @@ class DanimalsController < ApplicationController
 
   def update
     danimal = Danimal.find_by(id: params[:id])
-    
+
     updated_attributes = ({species: params[:species], leg_count: params[:leg_count]})
 
     danimal.update_attributes(updated_attributes)
 
     redirect_to danimal
+  end
+
+  def destroy
+    danimal = Danimal.find_by(id: params[:id])
+
+    danimal.destroy
+
+    redirect_to danimals_path
   end
 end
 

@@ -1,0 +1,14 @@
+<%= form_tag "/danimals/#{@danimal.id}", method: :patch do %>
+
+  <div>
+    <%= label_tag :species %>
+    <%= text_field_tag :species %>
+  </div>
+  
+  <div>
+    <%= label_tag :leg_count %>
+    <%= number_field_tag :leg_count %>
+  </div>
+
+  <%= submit_tag "Edit Danimal" %>
+<% end %>

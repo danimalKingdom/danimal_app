@@ -3,6 +3,7 @@
 <% @danimals.each do |danimal| %> 
   <div>
     Species: <%= danimal.species %> <br>
-    Leg Count: <%= danimal.leg_count %>
-  </div>
+    Leg Count: <%= danimal.leg_count %><br>
+    Belongs To: <%= danimal.user.first_name %>
+  </div><br>
 <% end %>
